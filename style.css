@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/*html, body {
+    background-color: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#heleboksen {
+    border: 3px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+   flex-direction: column;
+}
+
+#login-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    
+ }
+.username {
+    height: 26px;
+    font-size: larger;
+}
+.password {
+    height: 26px;
+}
+.userpass {
+    flex-direction: column;
+    display: flex;
+   
+}
+.userpass input {
+    size: 1.5em;
+}
+ #image {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 18%;
+   margin-top: -120px;
+    
+    
+ }
+.mini-boks {
+    border: 1px solid black;
+    padding: 150px;
+    margin: 0;
+
+    border-radius: 20px;
+    box-shadow: 100px;
+   
+}
+/* Reset some default browser styles */
+/*html, body {
+    margin: 0;
+    padding: 0;
+
+}*/
+
+.body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    height: 100vh; /* Use viewport height for full-height background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+#heleboksen {
+    background-color: #F2EFE9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px; /* Limit the content width */
+    padding: 20px;
+    padding-top: 5px;   
+    padding-bottom: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    margin: auto;
+}
+
+#image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 10px;
+   
+    border-radius: 2px /* Make it a circle */
+}
+
+#image img {
+    max-width: 100%;
+    height: auto; /* Maintain image aspect ratio */
+}
+
+#sign-in {
+    margin-left: 10px;
+    font-size: 23px;
+    
+}
+
+#login-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.userpass {
+  
+    padding: 50px;
+    padding-bottom: 100px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+.password {
+    width: 95%; /* Expand input fields to fill the container */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+.username {
+    width: 95%; /* Expand input fields to fill the container */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+.login-button {
+    background-color: #E3D0D7;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 102%;
+    padding-top: 
+    
+    
+}
+
+.login-button:hover {
+    background-color: black;
+}
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e3e6f3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #F4D1AE;
+    width: 100%;
+}
+
+#Navbar {
+    display: flex;
+    align-items: center;
+    background-color: #F4D1AE;
+    justify-content: flex-end; /* Align links to the right */
+    background-color: #ff; /* Optionally, you can add a background color */
+}
+
+#Navbar a {
+    padding: 0 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+
+/* Rest of your styles... */
+#login-icon {
+    padding:  29 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+#Navbar a:hover,
+#Navbar a.active {
+    color: #6E8898;
+}
+
+#Navbar a:active::after,
+#Navbar a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #6E8898;
+    position: absolute;
+    bottom: -4px;
+    left: 30px;
+}
+
+#logo {
+    padding-left: 10px;
+    padding-top: 2px;
+    width: 90px;
+}
+.login-register a{
+    display: flex;
+    text-decoration: none;
+    font-size: 1.2em;
+    align-items: start;
+    justify-content: flex-start;
+    color: white;
+    padding-left: 20px;
+ }
+ .login-register {
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    padding-right: 2;
+    background-color: #E3D0D7;
+
+ }
+ .login-register:hover {
+    background-color: black;
+}

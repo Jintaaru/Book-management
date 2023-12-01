@@ -1,0 +1,86 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e3e6f3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #F4D1AE;
+    width: 100%;
+}
+
+#Navbar {
+    display: flex;
+    align-items: center;
+    background-color: #F4D1AE;
+    justify-content: flex-end; /* Align links to the right */
+   /* Optionally, you can add a background color */
+}
+
+#Navbar a {
+    padding: 0 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+
+#login-icon {
+    padding:  29 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+#Navbar a:hover,
+#Navbar a.active {
+    color: #6E8898;
+}
+
+#Navbar a:active::after,
+#Navbar a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #6E8898;
+    position: absolute;
+    bottom: -4px;
+    left: 30px;
+}
+
+#logo {
+    padding-left: 10px;
+    padding-top: 2px;
+    width: 90px;
+}
+.login-register a{
+    display: flex;
+    text-decoration: none;
+    font-size: 1.2em;
+    align-items: start;
+    justify-content: flex-start;
+    color: white;
+    padding-left: 20px;
+ }
+ .login-register {
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    padding-right: 2;
+    background-color: #E3D0D7;
+
+ }
+ .login-register:hover {
+    background-color: black;
+}
