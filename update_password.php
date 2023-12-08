@@ -23,11 +23,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['new_password'])) {
 
     // Update the user's password in the database
     $stmt = $db->prepare('UPDATE users SET password = ? WHERE username = ? AND email = ?');
+    if (!$stmt) {
+        die("Error in statement preparation: " . $db->error);
+    }
+
     $stmt->bind_param('sss', $new_password, $_SESSION['reset_username'], $_SESSION['reset_email']);
-    $stmt->execute();
+    $stmt_result = $stmt->execute();
+
+    if (!$stmt_result) {
+        die("Error executing update query: " . $stmt->error);
+    }
 
     echo 'Password updated successfully. ';
-   echo '<a href="login">';
+    echo '<a href="login">';
 
     $stmt->close();
     $db->close();
@@ -35,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['new_password'])) {
     echo 'Invalid request.';
 }
 ?>
+
  <a href="login.php">Go back</a>
 
     
