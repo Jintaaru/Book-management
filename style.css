@@ -152,6 +152,14 @@
     border-radius: 5px;
     
 }
+.Email {
+    width: 95%; /* Expand input fields to fill the container */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
 
 .login-button {
     background-color: #E3D0D7;
@@ -160,10 +168,43 @@
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    width: 102%;
-    padding-top: 
+    width: 95%;
+
     
     
+}
+
+.login-button-2 {
+    background-color: #E3D0D7;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 103%;
+
+}
+
+.login-button-3 {
+    background-color: #E3D0D7;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 25%;
+    text-decoration: none;
+  
+    
+}
+.login-button-3 a {
+ color: white;
+}
+.login-button-2:hover {
+    background-color: black;
+}
+.login-button-3:hover {
+    background-color: black;
 }
 
 .login-button:hover {
@@ -182,12 +223,14 @@
     width: 100%;
 }
 
+
+
 #Navbar {
     display: flex;
     align-items: center;
     background-color: #F4D1AE;
     justify-content: flex-end; /* Align links to the right */
-    background-color: #ff; /* Optionally, you can add a background color */
+  
 }
 
 #Navbar a {
@@ -255,4 +298,12 @@
  }
  .login-register:hover {
     background-color: black;
+}
+
+.reset {
+    color: black;
+    text-decoration: none;
+}
+.reset a :hover {
+    background-color: white;
 }

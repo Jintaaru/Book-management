@@ -8,7 +8,9 @@ border: 1px solid black;
 border-radius: 20px;
     
 }
-
+* {
+    font-family: 'Poppins', sans-serif;
+}
 .book-box {
     background-color: #F2EFE9;
     padding: 20px;
@@ -21,13 +23,17 @@ border-radius: 20px;
 }
 
 #add-book {
-    background-color: #E3D0D7;
+    background-color: black;
     color: white;
     border: none;
     padding: 0.1px;
     border-radius: 5px;
     cursor: pointer;
     width: 70%;
+   
+}
+#add-book a {
+    color: white;
 }
 
 #add-book:hover {
@@ -37,4 +43,52 @@ border-radius: 20px;
 .book-container::after {
     content: "";
     flex: auto;
+}
+
+.addbook {
+    text-decoration: none;
+   
+ }
+
+.index-container {
+
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -14%;
+    margin-top: 5%;
+
+
+  
+}
+
+
+.index-container h4 {
+    color: #6E8898;
+ 
+}
+.index-container h1 {
+    color: #F4D1AE;
+}
+
+.maintext button {
+    background-image: url(images/button.png);
+    background-color: transparent;
+    color: #088178;
+    border: 0;
+    padding: 16px 140px 14px 90px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+.maintext a {
+    text-decoration: none;
+    color: black;
+}
+.maintext a:hover,
+.maintext a:active {
+    color: #6E8898;
+}
+.maintext button:hover {
+    color: #6E8898;
 }

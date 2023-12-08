@@ -17,9 +17,8 @@
         <div id="Navbar">
             <a href="index.html">Home</a>
             <a href="dashboard.php">Books</a>
-            <a href="about.html">About</a>
             <a href="Contact.html">Contact</a>
-            <a href="login.html"><i class="fa-sharp fa-regular fa-right-to-bracket" id="login-icon"></i></i></a>
+            <a href="logout.php"><i class="fa-sharp fa-regular fa-right-to-bracket" id="login-icon"></i></i></a>
 
 
         </div>
@@ -35,7 +34,7 @@
     session_start();
 
     if (!isset($_SESSION['user_id'])) {
-        header("Location: login.html"); // Redirect to login if not logged in
+        header("Location: login.php"); // Redirect to login if not logged in
         exit;
     }
 
@@ -49,7 +48,7 @@
     $user_id = $_SESSION['user_id'];
 
     // Retrieve books added by the logged-in user
-    $sql = "SELECT title, author, image_path FROM books WHERE user_id = ?";
+    $sql = "SELECT id, title, author, image_path FROM books WHERE user_id = ?";
     $stmt = $db->prepare($sql);
 
     if ($stmt === false) {
@@ -73,17 +72,24 @@
             if ($row["image_path"] != "images/default.jpg") {
                 echo '<img src="' . $row['image_path'] . '" alt="Book Cover" width="150">';
             }
+
+            // Add "Edit" and "Delete" buttons for each book
+            echo '<div class="book-actions">';
+            echo '<a href="edit_book.php?id=' . $row['id'] . '">Edit</a>';  // Update here
+            echo '<a href="delete_book.php?id=' . $row['id'] . '">Delete</a>';
+            echo '</div>';
+
             echo '</div>';
         }
-       
+
+
 
         // Add the "Add a Book" button in the same row
         echo '<div class="book-box" id="add-book">';
-        echo '<a href="add_book.php">Add a Book</a>';
+        echo '<a class="addbook" href="add_book.php">Add a Book</a>';
         echo '</div>';
-
-
     }
+    
 
     $stmt->close();
 
@@ -91,10 +97,9 @@
     $db->close();
     ?>
 
-    <!-- The Modal -->
+    
 
 
-    <script src="dashboard.js"></script>
 </body>
 <script src="https://kit.fontawesome.com/c09eeab3f2.js" crossorigin="anonymous"></script>
 

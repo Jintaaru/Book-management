@@ -10,6 +10,9 @@
     background-color: #F4D1AE;
     width: 100%;
 }
+* {
+    font-family: 'Poppins', sans-serif;
+}
 
 #Navbar {
     display: flex;
